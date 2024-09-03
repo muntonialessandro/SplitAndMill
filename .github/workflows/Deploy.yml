@@ -64,14 +64,14 @@ jobs:
         prerelease: false
     
     - name: Downloading Linux ZIP
-      uses: actions/download-artifact@v1
+      uses: actions/download-artifact@v4.1.7
       with:
         name: split_and_mill_portable_linux
     - name: Creating SplitAndMill Linux Archive
       run: |
         zip -r SplitAndMill-${{steps.envs.outputs.date}}-linux.zip split_and_mill_portable_linux/
     - name: Downloading Linux AppImage
-      uses: actions/download-artifact@v1
+      uses: actions/download-artifact@v4.1.7
       with:
         name: split_and_mill_linux_appimage
     - name: Renaming AppImage
